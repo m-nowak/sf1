@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "auto";
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
@@ -97,7 +98,7 @@ export function Overview() {
 
 const ProductionCard = () => {
   return (
-    <div>
+    <>
       <Card className="w-[420px] h-[381px]">
         <CardHeader>
           <CardTitle>
@@ -113,7 +114,7 @@ const ProductionCard = () => {
           <Overview />
         </CardContent>
       </Card>
-    </div>
+    </>
   );
 };
 
