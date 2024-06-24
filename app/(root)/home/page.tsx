@@ -1,5 +1,3 @@
-export const dynamic = "force-dynamic";
-
 import BreakDownsCard from "@/components/shared/breakdowns-card";
 import HeadCountCard from "@/components/shared/headcount-card";
 import HealthSafetyCard from "@/components/shared/healthsafety-card";

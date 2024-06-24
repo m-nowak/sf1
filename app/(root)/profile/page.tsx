@@ -3,11 +3,14 @@ import HealthSafetyCard from "@/components/shared/healthsafety-card";
 import IdeasCard from "@/components/shared/ideas-card";
 import IssuesCard from "@/components/shared/issues-card";
 import PointsCard from "@/components/shared/points-card";
-import ProductionCard from "@/components/shared/production-card";
+
+import dynamic from "next/dynamic";
+const ProductionCard = dynamic(
+  () => import("@/components/shared/production-card")
+);
+// import ProductionCard from "@/components/shared/production-card";
 import QualityCard from "@/components/shared/quality-card";
 import TransactionsCard from "@/components/shared/transacrions-card";
-
-export const dynamic = "force-dynamic";
 
 export default function ProfilePage({}) {
   return (
