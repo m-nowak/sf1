@@ -13,39 +13,6 @@ import {
 } from "recharts";
 import { Button } from "../ui/button";
 
-export const dynamic = "force-dynamic";
-
-const data = [
-  {
-    name: "Jun 27",
-    total: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    name: "Jun 21",
-    total: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    name: "Jun 22",
-    total: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    name: "Jun 23",
-    total: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    name: "Jun 24",
-    total: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    name: "Jun 25",
-    total: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    name: "Jun 26",
-    total: Math.floor(Math.random() * 5000) + 1000,
-  },
-];
-
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
     return (
@@ -58,7 +25,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null;
 };
 
-export function Overview() {
+export function Overview({ data }: any) {
   const originalConsoleError = console.error;
   console.error = (message, ...args) => {
     if (
@@ -98,7 +65,7 @@ export function Overview() {
   );
 }
 
-const ProductionCard = () => {
+const ProductionCard = ({ data }: any) => {
   return (
     <>
       <Card className="w-[420px] h-[381px]">
@@ -113,7 +80,7 @@ const ProductionCard = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="pl-0">
-          <Overview />
+          <Overview data={data} />
         </CardContent>
       </Card>
     </>
