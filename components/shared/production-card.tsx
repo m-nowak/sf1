@@ -13,6 +13,8 @@ import {
 } from "recharts";
 import { Button } from "../ui/button";
 
+export const dynamic = "force-dynamic";
+
 const data = [
   {
     name: "Jun 27",
