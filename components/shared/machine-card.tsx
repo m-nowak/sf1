@@ -224,7 +224,7 @@ const MachineExpanded = ({ mc }: { mc: string }) => {
 const Machine = ({ mc }: { mc: string }) => {
   return (
     <>
-      <Card className=" w-[216px] h-[254px] p-0">
+      <Card className=" w-[216px] h-[258px] p-0">
         <CardHeader className="p-2">
           <CardTitle>
             <div className="flex justify-between items-center">
