@@ -1,5 +1,5 @@
 "use client";
-export const dynamic = "force-dynamic";
+
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
@@ -95,6 +95,8 @@ export function Overview() {
     </ResponsiveContainer>
   );
 }
+
+export const dynamic = "force-static";
 
 const ProductionCard = () => {
   return (
