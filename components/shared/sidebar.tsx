@@ -67,7 +67,7 @@ const Sidebar = () => {
           </ul>
         </nav>
         <Button asChild className="rounded-full h-16">
-          <Link href="/sign-in">Login</Link>
+          <Link href="/">Login</Link>
         </Button>
         <UserButton />
       </div>
