@@ -7,6 +7,8 @@ import ProductionCard from "@/components/shared/production-card";
 import QualityCard from "@/components/shared/quality-card";
 import TransactionsCard from "@/components/shared/transacrions-card";
 
+export const dynamic = "force-dynamic";
+
 export default function ProfilePage({}) {
   return (
     <>
