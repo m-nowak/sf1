@@ -5,6 +5,8 @@ import IdeasCard from "@/components/shared/ideas-card";
 import ProductionCard from "@/components/shared/production-card";
 import QualityCard from "@/components/shared/quality-card";
 
+export const dynamic = "force-dynamic";
+
 export default function FeederDashboardPage() {
   const data = [
     {
