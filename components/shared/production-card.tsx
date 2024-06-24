@@ -1,5 +1,5 @@
 "use client";
-export const dynamic = "auto";
+export const dynamic = "force-dynamic";
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
