@@ -1,4 +1,4 @@
-"use client";
+export const dynamic = "force-dynamic";
 
 import BreakDownsCard from "@/components/shared/breakdowns-card";
 import HeadCountCard from "@/components/shared/headcount-card";

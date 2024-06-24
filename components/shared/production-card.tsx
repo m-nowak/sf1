@@ -96,8 +96,6 @@ export function Overview() {
   );
 }
 
-export const dynamic = "force-static";
-
 const ProductionCard = () => {
   return (
     <>
