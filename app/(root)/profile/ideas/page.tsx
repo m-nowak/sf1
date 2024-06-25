@@ -6,7 +6,7 @@ const IdeasPage = () => {
     <>
       {" "}
       <div className="flex items-start p-8">
-        <div className="flex items-start space-x-2 w-full p-1 border-b py-4">
+        <div className="flex items-start space-x-2 max-w-7xl p-1 border-b py-4">
           <Avatar title="Michal Nowak">
             <AvatarImage src="" />
             <AvatarFallback>MN</AvatarFallback>
