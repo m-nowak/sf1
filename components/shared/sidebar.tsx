@@ -12,7 +12,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="sidebar sticky">
+    <aside className="sidebar static">
       <div className="flex size-full flex-col gap-4">
         <Link href="/" className="sidebar-logo">
           <Image
