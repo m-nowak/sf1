@@ -4,7 +4,7 @@ const Header = ({ title, nav }: { title: string; nav: React.ReactNode }) => {
   return (
     
     <div className="">
-      <div className="header fixed top-0">
+      <div className="header static top-0">
         <div>{title}</div>
         <div className="header-right">
           <ModeToggle />
