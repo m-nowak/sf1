@@ -2,7 +2,7 @@ import ModeToggle from "./mode-toogle";
 
 const Header = ({ title, nav }: { title: string; nav: React.ReactNode }) => {
   return (
-    <div className="">
+    
     <div className="">
       <div className="header fixed top-0">
         <div>{title}</div>
