@@ -6,7 +6,7 @@ const Time = () => {
 
   useEffect(() => {
     async function fetchTime() {
-      const res = await fetch("http://127.0.0.1:3000/api/time", {
+      const res = await fetch("https://sf1.vercel.app/api/time", {
         cache: "no-store",
       });
       const data = await res.json();
