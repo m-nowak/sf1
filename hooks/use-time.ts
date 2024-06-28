@@ -10,5 +10,5 @@ const fetchTime = async () => {
 };
 
 export const useTime = () => {
-  return useQuery({ queryKey: ['time'], queryFn: fetchTime });
+  return useQuery({ queryKey: ['time'], queryFn: fetchTime, staleTime: 1000 });
 };

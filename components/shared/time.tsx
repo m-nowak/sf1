@@ -1,3 +1,4 @@
+"use client";
 import { useTime } from "@/hooks/use-time";
 
 const Time = () => {
@@ -7,7 +8,7 @@ const Time = () => {
     <div>
       {" "}
       {data ? (
-        <p className="mt-4 text-lg">{data.currentTime} 1</p>
+        <p className="mt-4 text-lg">{data.currentTime}</p>
       ) : (
         <p className="mt-4 text-lg">Loading...</p>
       )}
