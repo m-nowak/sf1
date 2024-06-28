@@ -2,7 +2,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 const fetchTime = async () => {
-  const response = await fetch('https://sf1.vercel.app/api/time', { cache: "no-store" });
+  const response = await fetch('/api/time', { cache: "no-store" });
   if (!response.ok) {
     throw new Error('Failed to fetch time');
   }
@@ -12,6 +12,7 @@ const fetchTime = async () => {
 export const useTime = () => {
   return useQuery({
     queryKey: ['time'], queryFn: fetchTime,
-    refetchOnMount: true,
+    refetchOnMount: 'always', // Refetch data every time the component mounts
+    refetchOnWindowFocus: true, // Refetch data when the window regains focus
   });
 };
