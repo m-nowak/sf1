@@ -3,6 +3,9 @@ import "./globals.css";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { QueryClientProvider } from "@tanstack/react-query";
+import queryClient from "../lib/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -13,8 +16,6 @@ export const metadata: Metadata = {
   title: "SF1",
   description: "Made by Michal Nowak",
 };
-
-export const dynamic = "force-static";
 
 export default function RootLayout({
   children,
@@ -29,9 +30,12 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system">
-          {children}
-        </ThemeProvider>
+        <QueryClientProvider client={queryClient}>
+          <ThemeProvider attribute="class" defaultTheme="system">
+            {children}
+          </ThemeProvider>{" "}
+          <ReactQueryDevtools initialIsOpen={false} />
+        </QueryClientProvider>
       </body>
     </html>
   );

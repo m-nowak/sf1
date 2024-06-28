@@ -9,9 +9,7 @@ import {
 } from "@/components/ui/table";
 import Time from "@/components/shared/time";
 
-export const dynamic = "force-dynamic";
-
-export default function IssuesPage() {
+const IssuesPage = () => {
   return (
     <div>
       <div className="p-4">
@@ -56,4 +54,6 @@ export default function IssuesPage() {
       </Table>
     </div>
   );
-}
+};
+
+export default IssuesPage;

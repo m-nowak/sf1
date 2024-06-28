@@ -1,9 +1,10 @@
 "use client";
+import { useTime } from "@/hooks/use-time";
 import { useState, useEffect } from "react";
 
 const Time = () => {
   const [time, setTime] = useState<string | null>(null);
-
+  const { data, error, isLoading } = useTime();
   useEffect(() => {
     async function fetchTime() {
       const res = await fetch("https://sf1.vercel.app/api/time", {
