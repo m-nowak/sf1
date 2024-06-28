@@ -8,13 +8,13 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Time from "@/components/shared/time";
+import TimeComponent from "../time/page";
 
-export const dynamic = "force-dynamic";
 const IssuesPage = () => {
   return (
     <div>
       <div className="p-4">
-        <Time />
+        <TimeComponent />
       </div>
 
       <Table className="mt-4 ml-8 max-w-7xl p-2">
