@@ -23,7 +23,7 @@ const IssuesPage = async () => {
   return (
     <div>
       <div className="p-4">
-        {thisTime.currentTime}
+        {thisTime.currentTime} hej
         {/* <Time /> */}
       </div>
 
