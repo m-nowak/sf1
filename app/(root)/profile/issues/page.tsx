@@ -1,6 +1,3 @@
-"use client";
-export const dynamic = "force-dynamic";
-
 import { useState, useEffect } from "react";
 import {
   Table,
@@ -10,27 +7,14 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import Time from "@/components/shared/time";
+
+export const dynamic = "force-dynamic";
 const IssuesPage = () => {
-  const [time, setTime] = useState<string | null>(null);
-
-  useEffect(() => {
-    async function fetchTime() {
-      const res = await fetch("/api/time", { cache: "no-cache" });
-      const data = await res.json();
-      setTime(data.currentTime);
-    }
-
-    fetchTime();
-  }, []);
   return (
     <div>
       <div className="p-4">
-        {" "}
-        {time ? (
-          <p className="mt-4 text-lg">{time}</p>
-        ) : (
-          <p className="mt-4 text-lg">Loading...</p>
-        )}
+        <Time />
       </div>
 
       <Table className="mt-4 ml-8 max-w-7xl p-2">
