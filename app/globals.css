@@ -151,7 +151,7 @@
   /* ===== SideBar Component */
      
   .sidebar {
-    @apply flex h-screen  px-5 py-3 border-border border-r-[1px];
+    @apply h-screen  px-5 py-3 border-border border-r-[1px];
   }
 
   .sidebar-logo {
