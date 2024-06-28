@@ -6,13 +6,23 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import Time from "@/components/shared/time";
-
-const IssuesPage = () => {
+// import Time from "@/components/shared/time";
+const fetchTime = async () => {
+  const response = await fetch("https://sf1.vercel.app/api/time", {
+    cache: "no-store",
+  });
+  if (!response.ok) {
+    throw new Error("Failed to fetch time");
+  }
+  return response.json();
+};
+const IssuesPage = async () => {
+  const thisTime = await fetchTime();
   return (
     <div>
       <div className="p-4">
-        <Time />
+        {thisTime.currentTime}
+        {/* <Time /> */}
       </div>
 
       <Table className="mt-4 ml-8 max-w-7xl p-2">
