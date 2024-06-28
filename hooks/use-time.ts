@@ -2,7 +2,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 const fetchTime = async () => {
-  const response = await fetch('/api/time', { cache: "no-store" });
+  const response = await fetch('/api/time', { cache: "no-cache" });
   if (!response.ok) {
     throw new Error('Failed to fetch time');
   }
