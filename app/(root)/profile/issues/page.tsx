@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { useState, useEffect } from "react";
 import {
   Table,
   TableBody,
@@ -8,8 +10,28 @@ import {
   TableRow,
 } from "@/components/ui/table";
 const IssuesPage = () => {
+  const [time, setTime] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function fetchTime() {
+      const res = await fetch("/api/time");
+      const data = await res.json();
+      setTime(data.currentTime);
+    }
+
+    fetchTime();
+  }, []);
   return (
     <div>
+      <div className="p-4">
+        {" "}
+        {time ? (
+          <p className="mt-4 text-lg">{time}</p>
+        ) : (
+          <p className="mt-4 text-lg">Loading...</p>
+        )}
+      </div>
+
       <Table className="mt-4 ml-8 max-w-7xl p-2">
         <TableHeader>
           <TableRow>
