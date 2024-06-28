@@ -6,7 +6,9 @@ const Time = () => {
 
   useEffect(() => {
     async function fetchTime() {
-      const res = await fetch("/api/time", { cache: "no-cache" });
+      const res = await fetch("http://127.0.0.1:3000/api/time", {
+        cache: "no-store",
+      });
       const data = await res.json();
       setTime(data.currentTime);
     }
