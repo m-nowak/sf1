@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/table";
 import Time from "@/components/shared/time";
 
+export const dynamic = "force-dynamic";
+
 const IssuesPage = () => {
   return (
     <div>
