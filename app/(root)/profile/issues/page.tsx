@@ -15,7 +15,7 @@ const IssuesPage = () => {
 
   useEffect(() => {
     async function fetchTime() {
-      const res = await fetch("/api/time");
+      const res = await fetch("/api/time", { cache: "no-store" });
       const data = await res.json();
       setTime(data.currentTime);
     }
