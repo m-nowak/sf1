@@ -16,6 +16,8 @@ const fetchTime = async () => {
   }
   return response.json();
 };
+
+export const dynamic = "force-dynamic";
 const IssuesPage = async () => {
   const thisTime = await fetchTime();
   return (
