@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import { useState, useEffect } from "react";
 import {
@@ -9,8 +10,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
-export const dynamic = "force-dynamic";
 const IssuesPage = () => {
   const [time, setTime] = useState<string | null>(null);
 
