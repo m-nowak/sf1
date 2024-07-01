@@ -10,12 +10,11 @@ import {
   import { useQuery } from '@tanstack/react-query';
   import { fetchTime } from "@/hooks/use-time";
 
+import {time} from '@/components/shared/time';
+
   export const dynamic = "force-dynamic";
-  const IssuesPage = () => {
-    const { data, error, isLoading } = useQuery<string, Error>({
-    queryKey: ['time'],
-    queryFn: fetchTime,
-  });
+  const IssuesPage = async () => {
+  
 
       if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -23,8 +22,8 @@ import {
     return (
       <div>
         <div className="p-4">
-          {data} rq
-  {/*         <Time /> */}
+       
+          <Time />
         </div>
   
         <Table className="mt-4 ml-8 max-w-7xl p-2">
