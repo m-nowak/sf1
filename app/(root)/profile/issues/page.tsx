@@ -8,14 +8,22 @@ import {
   } from "@/components/ui/table";
 import Time from "@/components/shared/time";
   
-  
+  const fetchTime = async () => {
+  const response = await fetch("https://sf1.vercel.app/api/time", {
+    cache: "no-store",
+  });
+  if (!response.ok) {
+    throw new Error("Failed to fetch time");
+  }
+  return response.json();
+};
   export const dynamic = "force-dynamic";
   const IssuesPage = async () => {
-    // const thisTime = await fetchTime();
+    const thisTime = await fetchTime();
     return (
       <div>
         <div className="p-4">
-{/*           {thisTime.currentTime} hej */}
+          {thisTime.currentTime} hej
 {/*          <Time />  */}
         </div>
   
