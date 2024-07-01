@@ -1,17 +1,20 @@
-"use client";
-import { useTime } from "@/hooks/use-time";
-export const dynamic = "force-dynamic";
+import { useQuery } from '@tanstack/react-query';
+import { fetchTime } from '@/hooks/use-time';
+
 const Time = () => {
-  const { data, error, isLoading } = useTime();
+  const { data, error, isLoading } = useQuery<string, Error>({
+    queryKey: ['time'],
+    queryFn: fetchTime,
+    refetchInterval: 5000, // Refetch every 5 seconds
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
 
   return (
     <div>
-{/*       {" "}
-      {data ? (
-        <p className="mt-4 text-lg">{data.currentTime}112</p>
-      ) : (
-        <p className="mt-4 text-lg">Loading...</p>
-      )} */}
+      <h1>Current Time</h1>
+      <p>{data}</p>
     </div>
   );
 };
