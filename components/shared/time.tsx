@@ -6,12 +6,12 @@ const Time = async () => {
 
   return (
     <div>
-      {" "}
+{/*       {" "}
       {data ? (
         <p className="mt-4 text-lg">{data.currentTime}112</p>
       ) : (
         <p className="mt-4 text-lg">Loading...</p>
-      )}
+      )} */}
     </div>
   );
 };
