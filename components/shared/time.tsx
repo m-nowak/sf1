@@ -3,9 +3,17 @@ import { fetchTime } from '@/hooks/use-time';
 
 const Time: React.FC = () => {
   const { data, error, isLoading } = useQuery(
-    'time',
-    fetchTime,
-    // { refetchInterval: 5000 } // Refetch every 5 seconds
+    {
+  queryKey: ['todos'],
+  queryFn: async () => {
+    const response = await fetch('api/time')
+    if (!response.ok) {
+      throw new Error('Network response was not ok')
+    }
+    return response.json()
+  },
+}
+ 
   );
 
   if (isLoading) return <div>Loading...</div>;
