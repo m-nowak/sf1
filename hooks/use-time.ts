@@ -7,7 +7,7 @@ export const fetchTime = async (): Promise<string> => {
     throw new Error('Failed to fetch time');
   }
   const data = await response.json();
-  return data.currentTime;
+  return data;
 };
 
 export const useTime = () => {
