@@ -5,7 +5,7 @@ const Time: React.FC = () => {
   const { data, error, isLoading } = useQuery(
     'time',
     fetchTime,
-    { refetchInterval: 5000 } // Refetch every 5 seconds
+    // { refetchInterval: 5000 } // Refetch every 5 seconds
   );
 
   if (isLoading) return <div>Loading...</div>;
