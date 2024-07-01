@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchTime } from '@/hooks/use-time';
 
 const Time: React.FC = () => {
-  const { data, error, isLoading } = useQuery<string, Error>(
+  const { data, error, isLoading } = useQuery(
     'time',
     fetchTime,
     { refetchInterval: 5000 } // Refetch every 5 seconds
