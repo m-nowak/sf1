@@ -8,7 +8,7 @@ import {
   } from "@/components/ui/table";
 
   import { useQuery } from '@tanstack/react-query';
-  import { fetchTime } from "@/hooks/fetchtime";
+  import { fetchTime } from "@/hooks/fetchTime";
 
   export const dynamic = "force-dynamic";
   const IssuesPage = async () => {
