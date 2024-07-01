@@ -8,11 +8,14 @@ import {
   } from "@/components/ui/table";
 
   import { useQuery } from '@tanstack/react-query';
-  import { useTime } from "@/hooks/use-time";
+  import { useTime } from "@/hooks/fetchtime";
 
   export const dynamic = "force-dynamic";
   const IssuesPage = async () => {
-    const { data, error, isLoading } = useTime();
+    const { data, error, isLoading } = useQuery<string, Error>({
+    queryKey: ['time'],
+    queryFn: fetchTime,
+  });
 
     return (
       <div>
