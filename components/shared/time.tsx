@@ -3,7 +3,7 @@ const Time = () => {
   const { data, error, isLoading } = useQuery({
     queryKey: ['time'],
     queryFn: async () => {
-      const response = await fetch('/api/time');
+      const response = await fetch('https://sf1.vercel.app/api/time');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
