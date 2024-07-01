@@ -11,7 +11,7 @@ import {
   import { fetchTime } from "@/hooks/use-time";
 
   export const dynamic = "force-dynamic";
-  const IssuesPage = async () => {
+  const IssuesPage = () => {
     const { data, error, isLoading } = useQuery<string, Error>({
     queryKey: ['time'],
     queryFn: fetchTime,
