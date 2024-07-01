@@ -10,7 +10,7 @@ import {
   import { useQuery } from '@tanstack/react-query';
   import { fetchTime } from "@/hooks/use-time";
 
-import {time} from '@/components/shared/time';
+import Time from '@/components/shared/time';
 
   export const dynamic = "force-dynamic";
   const IssuesPage = async () => {
