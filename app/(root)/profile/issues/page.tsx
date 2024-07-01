@@ -17,7 +17,7 @@ import {
     return (
       <div>
         <div className="p-4">
-          {data.currentTime} hej
+          {data.currentTime} rq
   {/*         <Time /> */}
         </div>
   
