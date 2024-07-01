@@ -11,11 +11,11 @@ import Time from "@/components/shared/time";
   
   export const dynamic = "force-dynamic";
   const IssuesPage = async () => {
-    const thisTime = await fetchTime();
+    // const thisTime = await fetchTime();
     return (
       <div>
         <div className="p-4">
-          {thisTime.currentTime} hej
+{/*           {thisTime.currentTime} hej */}
 {/*          <Time />  */}
         </div>
   
