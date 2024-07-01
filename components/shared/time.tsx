@@ -2,19 +2,17 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchTime } from '@/hooks/use-time';
 
 const Time: React.FC = () => {
-  const { data, error, isLoading } = useQuery(
-    {
-  queryKey: ['todos'],
-  queryFn: async () => {
-    const response = await fetch('api/time')
-    if (!response.ok) {
-      throw new Error('Network response was not ok')
-    }
-    return response.json()
-  },
-}
- 
-  );
+  const { data, error, isLoading } = useQuery<{ currentTime: string }, Error>({
+    queryKey: ['time'],
+    queryFn: async () => {
+      const response = await fetch('/api/time');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    },
+    refetchInterval: 5000, // Refetch every 5 seconds
+  });
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -25,4 +23,5 @@ const Time: React.FC = () => {
     </div>
   );
 };
+
 export default Time;
