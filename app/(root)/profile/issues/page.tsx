@@ -41,7 +41,7 @@ import { useQuery } from '@tanstack/react-query';
       <div>
         <div className="p-4">
           {thisTime.currentTime} hej
-         <Time /> 
+         
         </div>
   
         <Table className="mt-4 ml-8 max-w-7xl p-2">
