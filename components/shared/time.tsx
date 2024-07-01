@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
-const Time: React.FC = () => {
-  const { data, error, isLoading } = useQuery<any, Error, any, QueryKey>({
-    queryKey: 'time',
+const Time = () => {
+  const { data, error, isLoading } = useQuery({
+    queryKey: ['time'],
     queryFn: async () => {
       const response = await fetch('/api/time');
       if (!response.ok) {
