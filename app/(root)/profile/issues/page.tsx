@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-// import Time from "@/components/shared/time";
+import Time from "@/components/shared/time";
 const fetchTime = async () => {
   const response = await fetch("https://sf1.vercel.app/api/time", {
     cache: "no-store",
@@ -24,7 +24,7 @@ const IssuesPage = async () => {
     <div>
       <div className="p-4">
         {thisTime.currentTime} hej
-        {/* <Time /> */}
+        <Time />
       </div>
 
       <Table className="mt-4 ml-8 max-w-7xl p-2">
