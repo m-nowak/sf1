@@ -1,7 +1,7 @@
-"use client";
+// "use client";
 import { useTime } from "@/hooks/use-time";
-
-const Time = () => {
+export const dynamic = "force-dynamic";
+const Time = async () => {
   const { data, error, isLoading } = useTime();
 
   return (
