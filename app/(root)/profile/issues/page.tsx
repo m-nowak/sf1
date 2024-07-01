@@ -16,9 +16,7 @@ import Time from '@/components/shared/time';
   const IssuesPage = async () => {
   
 
-      if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
-
+     
     return (
       <div>
         <div className="p-4">
