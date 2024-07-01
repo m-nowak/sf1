@@ -17,7 +17,7 @@ const Time: React.FC = () => {
 
   return (
     <div>
-      Current Time: {data?.currentTime}
+{/*       Current Time: {data?.currentTime} */}h
     </div>
   );
 };
