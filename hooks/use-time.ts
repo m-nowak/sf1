@@ -1,7 +1,7 @@
 // hooks/use-time.ts
 import { useQuery } from '@tanstack/react-query';
 
-const fetchTime = async (): Promise<string> => {
+export const fetchTime = async (): Promise<string> => {
   const response = await fetch('/api/time', { cache: "no-cache" });
   if (!response.ok) {
     throw new Error('Failed to fetch time');
