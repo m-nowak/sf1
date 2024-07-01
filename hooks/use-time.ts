@@ -2,7 +2,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 export const fetchTime = async (): Promise<string> => {
-  const response = await fetch('/api/time', { cache: "no-cache" });
+  const response = await fetch('https://sf1.vercel.app/api/time', { cache: "no-cache" });
   if (!response.ok) {
     throw new Error('Failed to fetch time');
   }
