@@ -6,7 +6,7 @@ import {
     TableHeader,
     TableRow,
   } from "@/components/ui/table";
-import Time from "@/components/shared/time"
+import Time from "@/components/shared/time";
   
   
   export const dynamic = "force-dynamic";
