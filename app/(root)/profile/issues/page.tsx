@@ -12,8 +12,8 @@ import {
 
 import Time from '@/components/shared/time';
 
-  export const dynamic = "force-dynamic";
-  const IssuesPage = async () => {
+  // export const dynamic = "force-dynamic";
+  const IssuesPage =  () => {
   
 
      
