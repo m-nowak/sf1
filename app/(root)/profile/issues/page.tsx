@@ -12,7 +12,7 @@ import {
 
   export const dynamic = "force-dynamic";
   const IssuesPage = async () => {
-    const { data, error, isLoading } = useQuery<any, Error>(['users'], useTime);
+    const { data, error, isLoading } = useTime();
 
     return (
       <div>
