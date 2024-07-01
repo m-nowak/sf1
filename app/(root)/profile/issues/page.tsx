@@ -6,22 +6,17 @@ import {
     TableHeader,
     TableRow,
   } from "@/components/ui/table";
-
-  import { useQuery } from '@tanstack/react-query';
-  import { fetchTime } from "@/hooks/use-time";
-
-import Time from '@/components/shared/time';
-
-  // export const dynamic = "force-dynamic";
-  const IssuesPage =  () => {
+import Time from "@/components/shared/time"
   
-
-     
+  
+  export const dynamic = "force-dynamic";
+  const IssuesPage = async () => {
+    const thisTime = await fetchTime();
     return (
       <div>
         <div className="p-4">
-       
-          <Time />
+          {thisTime.currentTime} hej
+         <Time /> 
         </div>
   
         <Table className="mt-4 ml-8 max-w-7xl p-2">
