@@ -1,9 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
-import { fetchTime } from '@/hooks/use-time';
-
 const Time: React.FC = () => {
   const { data, error, isLoading } = useQuery<{ currentTime: string }, Error>({
-    queryKey: ['time'],
+    queryKey: 'time',
     queryFn: async () => {
       const response = await fetch('/api/time');
       if (!response.ok) {
